@@ -1,0 +1,13 @@
+{% extends "core/base.html" %} {% block title %} create post | {% endblock title%} {% block content %}
+
+<form action="." method="POST" class="create_post m-auto w-3/4 mx-auto my-4 lg:w-2/4 bg-gray-900">
+    {% csrf_token %}
+    <h2 class='text-white'>create post</h2>
+    <div>
+        <textarea name="body" class='outline-none' required id="id_body" placeholder= 'create a post'></textarea>
+    </div>
+    <button class="px-5 py-3 rounded-xl text-white bg-teal-800 hover:bg-teal-700" id="chat-message-submit">
+        Submit
+    </button>
+</form>
+{% endblock content %}

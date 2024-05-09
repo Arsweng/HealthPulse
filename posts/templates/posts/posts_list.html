@@ -1,0 +1,29 @@
+{% extends "core/base.html" %}
+
+{% block title %}Posts{% endblock title %}
+
+{% block content %}
+    <div class="w-3/4 mx-auto my-4 lg:w-2/4 flex justify-between">
+        <h1 class="text-5xl text-white">Post</h1>
+        <button class="px-2 bg-gray-800 hover:bg-gray-900 rounded-md">
+            <a href="/posts/create" class='text-white'>
+                new post
+            </a>
+        </button>
+    </div>
+
+    <div class="p-5 text-center">
+        {% for post in posts %}
+    <div class="bg-gray-800 p-1 rounded-sm w-3/4 mx-auto my-4 lg:w-2/4">
+        <div class='p-6'>
+            <h1 class='text-3xl text-white'>{{post.body}}</h1>
+        </div>
+        <p class="text-white text-center user_post">
+            @{{post.user.username}}
+        </p>
+        <a href="/posts/{{post.id}}">comment</a>
+    </div>
+            <hr>
+        {% endfor %}
+    </div>
+{% endblock content %}

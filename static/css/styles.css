@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Chillax, sans-serif;
+  box-sizing: border-box;
+}
+
+form input {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px;
+  border-radius: 8px;
+}
+form .helptext {
+  display: none;
+}
+form textarea {
+  width: 100%;
+  padding: 10px;
+  height: 300px;
+}
+form h2 {
+  text-align: center;
+  font-size: 35px;
+  line-height: 70px;
+}
+
+.create_post {
+  background-color: gray;
+  padding: 10px;
+}
+
+.messages {
+  height: 400px;
+  overflow-y: auto;
+}
+
+.body {
+  background-color: #454545;
+}
+
+.comment {
+  width: 100%;
+  padding: 10px;
+  height: 100px;
+}/*# sourceMappingURL=styles.css.map */
