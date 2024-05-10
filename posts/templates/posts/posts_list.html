@@ -15,6 +15,14 @@
     <div class="p-5 text-center">
         {% for post in posts %}
     <div class="bg-gray-800 p-1 rounded-sm w-3/4 mx-auto my-4 lg:w-2/4">
+        {% if post.pic %}
+
+
+        <div class='p-6'>
+            hello
+            <img src="{{ post.pic.url }}" alt="this is a pic" srcset="">
+        </div>
+        {% endif %}
         <div class='p-6'>
             <h1 class='text-3xl text-white'>{{post.body}}</h1>
         </div>

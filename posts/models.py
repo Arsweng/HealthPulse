@@ -10,4 +10,3 @@ class Comment(models.Model):
     body = models.TextField()
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     post = models.ForeignKey(Post,on_delete=models.CASCADE)
-

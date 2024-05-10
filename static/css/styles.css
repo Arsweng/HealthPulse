@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: Chillax, sans-serif;
+  font-family: poppins, sans-serif;
   box-sizing: border-box;
 }
 
@@ -43,4 +43,23 @@ form h2 {
   width: 100%;
   padding: 10px;
   height: 100px;
+}
+
+.black {
+  font-size: 100px;
+  line-height: 200px;
+  font-weight: 600;
+  font-family: Poppins, sans-serif;
+}
+
+.gray {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 70px;
+  font-family: Raleway, sans-serif;
+}
+
+.bg-img {
+  background-image: url(../img/);
+  justify-content: right;
 }/*# sourceMappingURL=styles.css.map */

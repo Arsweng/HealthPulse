@@ -8,10 +8,11 @@ def CreatePostView(request):
     if request.method == 'POST':
         user = request.user
         body = request.POST['body']
+        print(request.POST,pic)
         if body != '':
             post = Post.objects.create(
                 body=body,
-                user=user
+                user=user,
             )
             post.save()
             return redirect('posts:posts_list')
@@ -35,11 +36,12 @@ def PostDetailsComment(request,id):
         user = request.user
         body = request.POST['body']
         post = Post.objects.get(id=id)
+        print(request.POST)
         if body != '':
             comment = Comment.objects.create(
                 body=body,
                 user=user,
-                post=post
+                post=post,
             )
             comment.save()
             return render(request,'posts/post_details.html',{'post':post,'comments':comments})

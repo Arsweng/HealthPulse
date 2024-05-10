@@ -3,7 +3,33 @@
 {% block title %}Welcome | {% endblock %}
 
 {% block content %}
-    <div class="p-10 text-center">
-        <h1 class="text-3xl lg:text-6xl">healthy care</h1>
-    </div>
+
+        <div>
+            <div class="w-2/4 h-20 mt-10 ml-20">
+                <h1 class="black">Healthy Purse</h1>
+                <p class="text-5xl mt-16 gray">Welcome to our <span class="bg-gray-700 opacity-1/2 text-white"> health community,</span>
+                    <br> where care meets connection.</p>
+            </div>
+            <div class="absolute top-20 right-0 pt-8 pr-20">
+    
+                <img src="../../../static/img/simple.jpg" class='' alt="" srcset="">
+            </div>
+            <div class="mt-24 flex justify-center p-10  pt-24">
+                <div class="mt-24 pt-20">
+    
+                    <div class="mx-auto mt-24 ">
+                        <p class="text-3xl mb-2">Explore our platform and unlock a healthier you.</p>
+                        <div class="flex justify-center">
+                            {% if request.user.is_authenticated %}
+                                <a class="w-3/4 text-white rounded-lg p-3 mt-1 text-3xl text-center bg-gray-700" href="/rooms/">Visit rooms</a>
+                            {% else %}
+                                <a href="/signup/" class="w-3/4 text-white rounded-lg p-3 mt-1 text-3xl text-center bg-gray-700">>Sign up</a>
+
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 {% endblock %}
